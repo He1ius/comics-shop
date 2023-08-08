@@ -1,0 +1,105 @@
+
+body{
+    position: relative;
+
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+
+    background-image: url('./../img/pattern\ \(1\).svg');
+    color: white;
+}
+
+a{
+    color: white;
+
+    transition: var(--transition);
+
+    &:hover{
+        color: var(--color-pink);
+    }
+}
+
+.svg{
+
+    &--animate-fill path{
+        fill: white;
+        transition: var(--transition);
+    }
+    
+    &--animate-stroke path{
+        stroke: white;
+        transition: var(--transition);
+    }
+    
+    &--animate-fill:hover path{
+        fill: var(--color-pink);
+    }
+    &--animate-stroke:hover path{
+        stroke: var(--color-pink);
+    }
+
+}
+
+
+.page{
+
+    &__header{
+        margin-bottom: 40px;
+        padding-top: 40px;
+    }
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn{
+    color: white;
+    background-color: var(--color-green);
+
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+
+    transition: var(--transition);
+
+    &:hover{
+        background-color: var(--color-green-hover);
+    }
+}
+
+.main{
+
+    &__carousel{
+        margin-bottom: 60px;
+    }
+
+    &__brands{
+        margin-bottom: 60px;
+    }
+}
+
+.title{
+    text-align: center;
+}
+
+.h2{
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@media (min-width:552px) {
+    .logo{
+        width: 150px;
+        height: 150px;
+    }
+}

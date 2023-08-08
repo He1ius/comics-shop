@@ -1,0 +1,68 @@
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+
+    background-color: rgba($color: #000000, $alpha: 0.4);
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    overflow-y: auto;
+
+    transition: var(--transition);
+    visibility: hidden;
+    opacity: 0;
+
+    &__container{
+        position: relative;
+
+        background-color: var(--background-color);
+        border-radius: 10px;
+
+        padding: 50px 20px;
+
+        height: fit-content;
+
+        margin: 30px 15px;
+
+        transition: all 0.4s ease;
+        transform: scale(0.5);
+    }
+
+    &__title{
+        margin-bottom: 30px;
+    }
+
+    &.open{
+        visibility: visible;
+        opacity: 1;
+    }
+    &.open &__container{
+        transform: scale(1);
+    }
+
+    &__close{
+        cursor: pointer;
+
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        border-radius: 100px;
+    }
+
+    @media (min-width:768px) {
+        &__container{
+            padding: 60px 125px;
+        }
+
+        &__title{
+            margin-bottom: 70px;
+        }
+    }
+}

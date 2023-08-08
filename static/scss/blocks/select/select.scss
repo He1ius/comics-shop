@@ -1,0 +1,92 @@
+.select{
+    position: relative;
+
+    &__input{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 20px;
+
+        z-index: 3;
+        position: relative;
+
+        
+        padding: 10px 20px;
+        border-radius: 10px;
+        
+        transition: var(--transition);
+        cursor: pointer;
+        
+        background-color: var(--background-color-light);
+        &:hover{
+            background-color: var(--background-color-light-hover);
+            color: var(--color-pink);
+        }
+    }
+
+    &__icon{
+        padding-bottom: 3px;
+    }
+
+    &__icon, &__icon path{
+        transition: var(--transition);
+    }
+
+    &__input:hover &__icon path{
+        fill: var(--color-pink);
+    }
+
+    &--active &__icon{
+        transform: rotate(-180deg);
+    }
+
+    &--active &__items{
+        opacity: 1;
+    }
+
+    &__items{
+        position: absolute;
+        width: 100%;
+
+        overflow: hidden;
+        max-height: 0px;
+        opacity: 0;
+
+        background-color: var(--background-color-light-dark);
+
+        transition: var(--transition);
+        z-index: 2;
+
+        top: 85%;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    &__item{
+        transition: var(--transition);
+        cursor: pointer;
+
+        padding: 10px 20px;
+
+        &:hover{
+            background-color: var(--background-color-light-hover);
+            color: var(--color-pink);
+        }
+
+        &--active{
+            background-color: var(--background-color-light);
+            color: var(--color-pink);
+        }
+    }
+
+    &__item:first-child{
+        padding-top: 20px;
+    }
+
+    &__item:last-child{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}

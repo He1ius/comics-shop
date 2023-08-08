@@ -1,0 +1,149 @@
+
+.burger{
+
+    color: white;
+
+    &__name{
+        display: flex;
+        align-items: center;
+
+        gap: 5px;
+
+        font-size: 20px;
+
+    }
+    
+    &--visible &__content{
+        left: 0px!important;
+    }
+    
+    &__icon{
+        display: flex;
+        flex-direction: column;
+
+        row-gap: 5px;
+    }
+
+    &--visible &__icon span:nth-child(1){
+        transform: translateY(9px) rotateZ(-45deg);
+    }
+
+    &--visible &__icon span:nth-child(3){
+        transform: translateY(-9px) rotateZ(45deg);
+    }
+
+    &--visible &__icon span:nth-child(2){
+        opacity: 0;
+    }
+
+    &__icon span{
+        display: block;
+
+        width: 30px;
+        height: 4px;
+
+        background-color: white;
+
+        transition: var(--transition);
+    }
+
+    &__icon:hover span{
+        background-color: var(--color-pink);
+    }
+
+    &__content{
+        position: fixed;
+        top: 0;
+        left: -100%;    
+
+        height: 100%;
+
+        background-color: var(--background-color);
+        padding: 20px;
+
+        transition: var(--transition);
+    
+        z-index: 999;
+    }
+
+    &__title{
+        position: relative;
+
+        font-size: 24px;
+        font-weight: 600;
+        
+        margin-bottom: 30px;
+
+        &:before{
+            content: "";
+            position: absolute;
+
+            bottom: -5px;
+
+            height: 1px;
+            width: 100%;
+
+            background-color: #3b3741;
+        }
+    }
+
+    &__subtitle{
+        font-size: 18px;
+        font-weight: 600;
+        
+        margin-bottom: 10px;
+    }
+
+    &__li{
+        margin-bottom: 5px;
+
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+
+    &__ul{
+        margin-bottom: 20px;
+        position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+
+            bottom: -5px;
+
+            height: 1px;
+            width: 100%;
+
+            background-color: #3b3741;
+        }
+    }
+  
+    &--visible &__shadow{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-color: black;
+        opacity: 0.2;
+
+        z-index: 998;
+    }
+
+    &__close{
+        position: absolute;
+        top: 7px;
+        right: 7px;
+
+        border-radius: 100px;
+
+        padding: 9px 18px;
+
+        transition: var(--transition);
+        &:hover{
+            color: var(--color-pink);
+        }
+    }
+}

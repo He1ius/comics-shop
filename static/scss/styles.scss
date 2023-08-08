@@ -1,0 +1,25 @@
+// Bootstrap
+@import "./libs/bootstrap/functions";
+@import "./libs/bootstrap/bootstrap-grid.scss";
+@import "./libs/bootstrap/bootstrap-reboot.scss";
+
+// Common blocks
+@import "./common-blocks.scss";
+
+// Blocks
+@import "./blocks/header/header.scss";
+@import "./blocks/burger/burger.scss";
+@import "./blocks/search/search.scss";
+@import "./blocks/carousel/carousel.scss";
+@import "./blocks/brands/brands.scss";
+@import "./blocks/catalog/catalog.scss";
+@import "./blocks/filter/filter.scss";
+@import "./blocks/accordion/accordion.scss";
+@import "./blocks/select/select.scss";
+@import "./blocks/card/card.scss";
+@import "./blocks/footer/footer.scss";
+@import "./blocks/modal/modal.scss";
+@import "./blocks/form/form.scss";
+
+// Vars
+@import "./vars.scss";

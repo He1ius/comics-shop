@@ -1,0 +1,7 @@
+.carousel__item {
+  width: 500px;
+  height: 500px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,30 @@
+.accordion{
+
+    &__items{
+        background-color: var(--background-color-light-dark);
+
+        max-height: 0;
+        opacity: 0;
+
+        overflow: hidden;
+
+        transition: var(--transition);
+    }
+
+    &--open &__items{
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .filter__svg svg{
+        transition: var(--transition);
+    }
+    &--open .filter__svg svg{
+        transform: rotate(180deg);
+    }
+
+    & .filter__item:last-child{
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px
+    }
+}
