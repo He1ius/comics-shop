@@ -1,0 +1,44 @@
+.questions{
+
+    &__title{
+        text-align: start;
+        margin-bottom: 30px;
+    }
+
+    &__content{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        margin-bottom: 15px;
+    }
+
+    &__inputs{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        row-gap: 15px;
+    }
+
+    &__input{
+
+        width: 322px;
+        height: 60px;
+    }
+
+    &__btn{
+        padding: 20px 72px;
+        text-transform: none;
+    }
+
+    &__textarea{
+        resize: none;
+        min-height: 180px;
+        max-width: 320px;
+        min-width: 320px;
+
+        padding-top: 15px;
+    }
+
+}

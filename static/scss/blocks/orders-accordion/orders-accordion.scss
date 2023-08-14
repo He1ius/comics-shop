@@ -1,0 +1,132 @@
+/* reset default styles */
+.orders-accordion__list{
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+}
+.orders-accordion__control, .orders-accordion__icon{
+    background-color: none;
+    cursor: pointer;
+    border: none;    
+    text-align: inherit;
+    padding: 0;
+    
+}
+
+/* orders-accordion styles */
+.orders-accordion__control{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    row-gap: 15px;
+
+    background-color: var(--background-color-dark);
+
+    padding: 20px 30px;
+
+    width: 100%;
+
+    border-radius: 10px;
+    /* Свойства изменение которых необходимо отслеживать */
+  transition-property: width;
+
+  /* Устанавливаем "незаметную для глаза" длительность перехода */
+  transition-duration: 1ms;
+
+    &--categories{
+        padding: 0;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        border: none;
+    }
+}
+.orders-accordion__title{
+    font-family: Roboto;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+.orders-accordion__icon{
+    display: flex;
+    align-items: center;
+
+    width: 15px;
+    height: 20px;
+
+    transform: rotate(180deg);
+    transition: 0.4s ease;
+
+    user-select: none;
+}
+.orders-accordion__content{
+    box-sizing: content-box;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    background-color: var(--background-color-light-dark);
+
+    padding: 0 30px;
+
+    transition-property: max-height, opacity, padding-top, padding-bottom;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+
+    &--categories{
+        padding: 0;
+    }
+}
+
+.open.orders-accordion__icon{
+    transition: 0.4s ease;
+    transform: rotate(0deg);
+}
+.open.orders-accordion__content{
+    opacity: 1;
+
+    margin-bottom: 2px;
+    padding: 20px 30px 0px 30px;
+    
+    &--categories{
+        padding: 10px 0px 0px 0px;
+    }
+}
+
+.orders-accordion__right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    justify-content: space-between;
+    width: 100%;
+
+    font-size: 18px;
+    font-family: Roboto;
+}
+
+.orders-accordion__item{
+    margin-bottom: 15px;
+
+    &--categories{
+        border: none;
+        margin-bottom: 25px;
+    }
+}
+
+.orders-accordion__item .cart__item:last-child{
+    border: none;
+}
+
+@media(min-width:768px){
+    .orders-accordion__right{
+        width: auto;
+    }
+    
+}

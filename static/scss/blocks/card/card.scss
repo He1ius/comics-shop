@@ -17,6 +17,10 @@
         box-shadow: 0px 9px 29px -1px rgba(255, 255, 255, 0.14);
     }
 
+    &--no-shadow:hover{
+        box-shadow: none!important
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -69,5 +73,29 @@
     &__price{
         font-size: 20px;
         font-weight: 600;
+
+        display: flex;
+        align-items: center;
+
+        gap: 5px;
+
+        color: white;
+    }
+
+    &__price--theme-discount &__old{
+        text-decoration-line: line-through;
+        color: gray;
+
+        font-size: 11px;
+    }
+
+    &__percent{
+        background-color: var(--color-green);
+        border-radius: 10px;
+
+        padding: 2px 4px;
+        font-size: 14px;
+
+        color: white;
     }
 }

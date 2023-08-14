@@ -1,0 +1,33 @@
+.contacts{
+
+    &__items{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        width: 300px;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        row-gap: 30px;
+    }
+
+    &__title{
+        text-align: start;
+        margin-bottom: 30px;
+    }
+
+    &__map{
+        min-height: 520px;
+
+        background-position: center;
+    }
+}
+
+.footer--no-top{
+    margin-top: 0;
+}

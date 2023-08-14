@@ -1,0 +1,99 @@
+.personal-area__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 30px;
+}
+.personal-area__container--orders {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.personal-area__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+.personal-area__item {
+  width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.personal-area__item:hover, .personal-area__item--active {
+  font-size: 19px;
+  font-weight: 700;
+}
+.personal-area__item p {
+  position: absolute;
+  margin-left: 30px;
+}
+.personal-area__title {
+  margin-bottom: 30px;
+  text-align: start;
+}
+.personal-area__sub-title {
+  margin-bottom: 25px;
+}
+.personal-area__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.personal-area__input {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+.personal-area__right {
+  min-width: 340px;
+}
+.personal-area__right--width-full {
+  width: 100%;
+}
+.personal-area__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 30px;
+  gap: 20px;
+}
+.personal-area__btn {
+  padding: 20px 0px;
+  width: 252px;
+  text-transform: none;
+}
+@media (min-width: 992px) {
+  .personal-area__container--orders {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}

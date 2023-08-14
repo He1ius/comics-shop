@@ -1,0 +1,47 @@
+.pagination{
+
+    &__items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    &__back{
+        margin-right: 5px;
+    }
+    &__next{
+        margin-left: 5px;
+    }
+
+    &__item{
+        cursor: pointer;
+
+        padding: 5px 13px;
+    }
+
+    &__item--select{
+        background-color: var(--color-green-hover);
+    }
+
+    @media (min-width:576px) {
+        &__items{
+            gap: 10px;
+        }
+    
+        &__back{
+            margin-right: 10px;
+        }
+        &__next{
+            margin-left: 10px;
+        }
+
+        
+        &__item{
+            cursor: pointer;
+
+            padding: 10px 20px;
+        }
+    }
+}

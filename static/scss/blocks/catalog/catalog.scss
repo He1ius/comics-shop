@@ -38,6 +38,10 @@
         margin-top: 20px;
     }
 
+    &__pagination{
+        margin-top: 20px;
+    }
+
     @media (min-width:552px) {
         &__items{
             grid-template-columns: 1fr 1fr;

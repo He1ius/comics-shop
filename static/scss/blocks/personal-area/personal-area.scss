@@ -1,0 +1,107 @@
+.personal-area{
+
+    &__container{
+        display: flex;
+        gap: 60px;
+
+        flex-wrap: wrap;
+        row-gap: 30px;
+
+        &--orders{
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+    }
+
+    &__items{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__item{
+        width: 240px;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 18px;
+
+        transition: var(--transition);
+
+        &:hover, &--active{
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        & p{
+            position: absolute;
+            margin-left: 30px;
+        }
+        
+    }
+
+    &__title{
+        margin-bottom: 30px;
+        text-align: start;
+    }
+
+    &__sub-title{
+        margin-bottom: 25px;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input{
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+
+    &__right{
+        min-width: 340px;
+
+        &--width-full{
+            width: 100%;
+        }
+    }
+
+    &__btns{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        gap: 20px;
+    }
+
+    &__input{
+        width: 100%;
+        height: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: var(--background-color-light);
+        border-radius: 10px;
+        color: white;
+        -webkit-transition: var(--transition);
+        transition: var(--transition);
+        z-index: 3;
+    }
+
+    &__btn{
+        padding: 20px 0px;
+        width: 252px;
+        text-transform: none;
+    }
+
+    @media(min-width: 992px){
+        &__container{
+
+            &--orders{
+                flex-direction: row;
+            }
+        }
+    }
+}

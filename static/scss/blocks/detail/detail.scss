@@ -1,0 +1,120 @@
+.detail{
+
+    &__img{
+        height: 315px;
+        width: 220px;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    &__main-imgs{
+        width: 220px;
+    }
+
+    &__imgs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__main-char, &__points{
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+
+        width: 260px;
+    }
+    
+    &__point{
+        display: flex;
+        justify-content: space-between;
+
+        width: 220px;
+    }
+
+    &__top{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__btn{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+
+        font-weight: 700;
+    }
+
+    &__bottom{
+        margin-bottom: 30px;
+    }
+
+    &__btn-wrapp{
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    &__favorite{
+        height: 100%;
+    }
+
+    &__favorite:hover path{
+        fill: var(--color-pink);
+    }
+
+    &__slider{
+        width: 372px;
+    }
+
+
+    &__slider-item{
+        height: 111px;
+
+        margin: 0 10px;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        cursor: pointer;
+    }
+
+    &__price{
+        display: flex;
+        gap: 10px;
+    }
+
+    &__percent{
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+    }
+    
+    &__old{
+        font-size: 27px;
+        text-decoration-line: line-through;
+        color: gray;
+    }
+
+    &__now{
+        font-size: 35px;
+    }
+
+    @media(min-width:768px){
+        &__top{
+            justify-content: start;
+        }    
+    }
+}
